@@ -8,7 +8,7 @@ public class AppleTreeTest {
 
     @Test
     public void testInheritance(){
-        Apple apple = new Apple();
-        Assert.assertTrue(apple instanceof Crop);
+        AppleTree appleTree = new AppleTree();
+        Assert.assertTrue(appleTree instanceof Crop);
     }
 }

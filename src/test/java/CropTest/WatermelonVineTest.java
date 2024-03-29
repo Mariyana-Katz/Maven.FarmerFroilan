@@ -8,8 +8,8 @@ public class WatermelonVineTest {
 
     @Test
     public void testInheritance(){
-        Watermelon watermelon = new Watermelon();
-        Assert.assertTrue(watermelon instanceof Crop);
+        WatermelonVine watermelonVine = new WatermelonVine();
+        Assert.assertTrue(watermelonVine instanceof Crop);
     }
 
 

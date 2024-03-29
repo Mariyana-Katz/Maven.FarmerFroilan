@@ -1,58 +1,108 @@
 package GenericsTest;
+import CropRow.CropRow;
+import CropTest.TomatoPlantTest;
+import PersonTest.FarmerTest;
+import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 public class CropRowTest {
-    @Test
 
-    public void testCropRow(){
-        CropRow croprow = new CropRow();
+
+    /* public void testCropRow(){
+        CropRow<Crop> croprow = new CropRow<Crop>();
         Assert.assertTrue(croprow instanceof Crop);
+    } */
+
+    @Test
+    public void testHasBeenPlanted(){
+        CropRow<TomatoPlant> rowOne = new CropRow<>();
+        Farmer froilan = new Farmer();
+        TomatoPlant tPlant = new TomatoPlant();
+
+        froilan.plant(tPlant, rowOne);
+
+        Assert.assertTrue(rowOne.hasBeenPlanted);
     }
      @Test
+     public void testGetHowManyPlanted(){
+         CropRow<TomatoPlant> rowOne = new CropRow<>();
+         TomatoPlant tPlant = new TomatoPlant();
+         Farmer froilan = new Farmer();
+
+         froilan.plant(tPlant, rowOne);
+         froilan.plant(tPlant, rowOne);
+         froilan.plant(tPlant, rowOne);
+         froilan.plant(tPlant, rowOne);
+         froilan.plant(tPlant, rowOne);
+
+         Integer expected = 5;
+         Integer actual = rowOne.size();
+
+         Assert.assertEquals(actual, expected);
+     }
+
+     @Test
+    public void testBeenFertilized(){
+         CropRow<TomatoPlant> rowOne = new CropRow<>();
+         TomatoPlant tPlant = new TomatoPlant();
+         CropDuster cropDuster = new CropDuster();
+
+         cropDuster.fertilize(rowOne);
+
+         Assert.assertTrue(rowOne.hasBeenFertilized());
+     }
+
+     @Test
     public void testAddCrop(){
-//        CropRow cropRow = new CropRow();
-//        Crop crop = new crop();
-//        CropRow.addCrop(expected);
-//        Crop actual = cropRow.getRow()<>;
-//        Assert.assertEquals(actual, expected);
-//
+         CropRow<TomatoPlant> rowOne = new CropRow<>();
+         Farmer froilan = new Farmer();
+         TomatoPlant tPlant = new TomatoPlant();
 
-     }
-     @Test
-     public void testGetPlanted(){
+         froilan.plant(tPlant, rowOne);
 
-     }
+         Assert.assertTrue(rowOne.contains(tPlant));
 
-     @Test
-    public void testBeenFertalized(){
-
-     }
-
-     @Test
-    public void testBeenPlanted(){
-
-     }
+    }
 
      @Test
     public void testBeenHarvested(){
+         CropRow<TomatoPlant> rowOne = new CropRow<>();
+         TomatoPlant tPlant = new TomatoPlant();
+         Tractor tractor = new Tractor();
 
+         tractor.harvest(rowOne);
+
+         Assert.assertTrue(rowOne.hasBeenHarvested());
      }
 
-     @Test
-    public void testFertilizedRow(){
 
+     @Test
+     public void testWasWatered(){
+         CropRow<TomatoPlant> rowOne = new CropRow<>();
+         TomatoPlant tPlant = new TomatoPlant();
+         Squirtle squirtle = new Squirtle();
+
+         squirtle.water(rowOne);
+
+         Assert.assertTrue(rowOne.hasBeenWatered());
      }
 
-     @Test
-    public void testHarvestRow(){
 
-     }
+
 
      @Test
-    public void testRowEmpty(){
+    public void testisRowEmpty(){
+         CropRow<TomatoPlant> rowOne = new CropRow<>();
+         TomatoPlant tPlant = new TomatoPlant();
+
+         rowOne.clear();
+
+         Assert.assertTrue(rowOne.isEmpty());
+
+
 
      }
 

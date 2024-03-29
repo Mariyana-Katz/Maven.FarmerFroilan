@@ -8,7 +8,7 @@ public class CornStalkTest {
 
     @Test
     public void testInheritance(){
-        Corn corn = new Corn();
-        Assert.assertTrue(corn instanceof Crop);
+        CornStalk cornStalk = new CornStalk();
+        Assert.assertTrue(cornStalk instanceof Crop);
     }
 }

@@ -3,12 +3,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TomatoPlantTest {
-     @Test
+
 
      @Test
      public void testInheritance(){
-         Tomatoe tomatoe  = new Tomatoe();
-         Assert.assertTrue(tomatoe instanceof Crop);
+         TomatoePlant tomatoePlant  = new TomatoePlant();
+         Assert.assertTrue(tomatoePlant instanceof Crop);
      }
 //      @Test
 //
