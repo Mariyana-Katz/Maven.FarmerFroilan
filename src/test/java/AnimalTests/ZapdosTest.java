@@ -1,6 +1,9 @@
 package AnimalTests;
+import com.zipcodewilmington.froilansfarm.Animals.Zapdos;
 import org.junit.Assert;
 import org.junit.Test;
+import com.zipcodewilmington.froilansfarm.Animals.Animal;
+
 
 public class ZapdosTest {
     @Test
@@ -48,7 +51,7 @@ public class ZapdosTest {
         Double expected = 0.0145;
 
         zapdos.setId(expected);
-        String actual = zapdos.getId();
+        Double actual = zapdos.getId();
         Assert.assertEquals(expected, actual);
     }
     @Test
@@ -69,9 +72,18 @@ public class ZapdosTest {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void zapdosEventTest() {
-        if(stormChance =< 5){
-
+    public void zapdosEventTest1() {
+        Field field = new Field;
+        Zapdos zapdos = new Zapdos(null, null, null);
+        stormChance = 3
+        if(stormChance =< 7){
+            thunderStormEvent();
         }
+        Assert.assertTrue(field.beenWatered());
+    }
+    @Test
+    public void thunderStormEventTest(){
+        Field field = new Field;
+        Assert.assertTrue(field.beenWatered());
     }
 }

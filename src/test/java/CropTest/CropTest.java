@@ -5,7 +5,15 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class CropTest {
+
+    public static class CropTest {
+
+//    @Test
+//    public void testInheritance(){
+//        Crop crop = new Crop();
+//        Assert.assertTrue(crop instanceof Crop);
+//    }
+
 
 
 
@@ -43,35 +51,19 @@ public class CropTest {
 
         @Test
     public void testYield1(){
-        CropRow<tomatoPlant> rowOne = new CropRow<>();
-        if(croprow.hasBeenFertilized = true && croprow.hasBeenHarvested = false){
-
-        }
-           Assert.assertTrue(true);
-        }
-        }
-
-
-    @Test
-    public void testYield2(){
-        CropRow<Crop> rowOne = new CropRow<>();
-        if(croprow.hasBeenFertilized == false && croprow.hasBeenHarvested == true){
-
-            Assert.assertTrue();
-        }
+        TomatoPlant tomatoPlant = new TomatoPlant();
+        Assert.assertTrue(tomatoPlant.yield() instanceof Tomato);
     }
 
+        @Test
+        public void testYield2(){
+            AppleTree AppleT = new AppleTree();
+            Assert.assertTrue(appleTree.yield() instanceof Apple);
+        }
 
 
 
-
-
-
-
-
-
-
-}
+    }
 
 
 

@@ -8,5 +8,5 @@ public class CropRow<T extends Crop>{
     CropRow<Cornstalk> rowFour = new CropRow();
     CropRow<Appletree> rowFive = new CropRow();
 
-    public // plant, gather
+    //public // plant, gather
 }
