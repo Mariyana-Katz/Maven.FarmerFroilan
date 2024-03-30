@@ -1,29 +1,28 @@
 package CropTest;
 import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
-import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class DragonfruitTest {
+public class DragonfruitTreeTest {
 
     @Test
 
     @Test
     public void testInheritance(){
-        Dragonfruit dragonfruit = new Dragonfruit();
-        Assert.assertTrue(dragonfruit instanceof Crop);
+        DragonfruitTree dragonfruitTree = new DragonfruitTree();
+        Assert.assertTrue(dragonfruitTree instanceof Crop);
     }
 
     @Test
     public void testYield1(){
-        Dragonfruit dragonfruit = new Dragonfruit();
-        dragonfruit.fertilize();
-        Assert.assertTrue(dragonfruit.yield() instanceof Dragonfruit);
+        Dragonfruit dragonfruitTree = new DragonfruitTree();
+        dragonfruitTree.fertilize();
+        Assert.assertTrue(dragonfruitTree.yield() instanceof Dragonfruit);
     }
 
     @Test
     public void testHarvest(){
-        Crop crop = new Dragonfruit();
+        Crop crop = new DragonfruitTree();
         Assert.assertFalse(crop.hasBeenHarvested());
 
         crop.harvest();
@@ -33,7 +32,7 @@ public class DragonfruitTest {
 
     @Test
     public void testHasBeenHarvested() {
-        Crop crop = new Dragonfruit();
+        Crop crop = new DragonfruitTree();
         Assert.assertFalse(crop.hasBeenHarvested());
 
         crop.harvest();
@@ -42,7 +41,7 @@ public class DragonfruitTest {
 
     @Test
     public void testFertilize(){
-        Crop crop = new Dragonfruit();
+        Crop crop = new DragonfruitTree();
         Assert.assertFalse(crop.hasBeenFertilized());
 
         crop.fertilize();
@@ -52,7 +51,7 @@ public class DragonfruitTest {
 
     @Test
     public void testHasBeenFertilized() {
-        Crop crop = new Dragonfruit();
+        Crop crop = new DragonfruitTree();
         Assert.assertFalse(crop.hasBeenFertilized());
 
         crop.fertilize();
