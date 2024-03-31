@@ -1,5 +1,5 @@
 package CropTest;
-import CropRow.CropRow;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,22 +7,13 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 
-    public static class CropTest {
+    public class CropTest {
 
 //    @Test
 //    public void testInheritance(){
 //        Crop crop = new Crop();
 //        Assert.assertTrue(crop instanceof Crop);
 //    }
-
-
-
-
-    @Test
-    public void testImplementation() {
-        Crop crop = new Crop();
-        Assert.assertTrue(crop instanceof Produce);
-    }
 
 
 //        @Test

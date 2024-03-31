@@ -1,5 +1,6 @@
 package CropTest;
-import CropRow.CropRow;
+import com.zipcodewilmington.froilansfarm.Crop.AppleTree;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,11 +1,13 @@
 package CropTest;
+import com.zipcodewilmington.froilansfarm.Crop.CornStalk;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class CornStalkTest {
 
-    @Test
+
 
     @Test
     public void testInheritance(){
@@ -16,7 +18,7 @@ public class CornStalkTest {
     public void testYield1(){
        CornStalk cornStalk = new CornStalk();
        cornStalk.fertilize();
-        Assert.assertTrue(cornStalk.yield() instanceof earCorn);
+        Assert.assertTrue(cornStalk.yield() instanceof EarCorn);
     }
 
     @Test

@@ -1,11 +1,13 @@
 package CropTest;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.DragonfruitTree;
 import com.zipcodewilmington.froilansfarm.Food.Dragonfruit;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class DragonfruitTreeTest {
 
-    @Test
+
 
     @Test
     public void testInheritance(){
@@ -15,7 +17,7 @@ public class DragonfruitTreeTest {
 
     @Test
     public void testYield1(){
-        Dragonfruit dragonfruitTree = new DragonfruitTree();
+        DragonfruitTree dragonfruitTree = new DragonfruitTree();
         dragonfruitTree.fertilize();
         Assert.assertTrue(dragonfruitTree.yield() instanceof Dragonfruit);
     }

@@ -1,11 +1,13 @@
 package CropTest;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
+import com.zipcodewilmington.froilansfarm.Crop.WatermelonVine;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
+import com.zipcodewilmington.froilansfarm.Food.Watermelon;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class WatermelonVineTest {
 
-    @Test
 
     @Test
     public void testInheritance(){
