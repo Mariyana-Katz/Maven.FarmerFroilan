@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.Vehicle;
 
+import com.zipcodewilmington.froilansfarm.Crop.CropRow;
+import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Person.Pilot;
 
 
@@ -32,5 +34,8 @@ public class CropDuster {
 
     public boolean beenFertalized() {
         return false;
+    }
+
+    public void fertilize(CropRow<TomatoPlant> rowOne) {
     }
 }

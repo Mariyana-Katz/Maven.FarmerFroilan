@@ -5,9 +5,9 @@ import java.util.List;
 
 public class CropRow<T extends Crop> {
     List<T> cropRow;
-    private boolean isRowWatered = false;
-    private boolean isRowFertilized = false;
-    private boolean isRowHarvested = false;
+    private boolean hasRowWatered = false;
+    private  boolean hasRowFertilized = false;
+    private boolean hasRowHarvested = false;
 
     public CropRow(){
         this.cropRow = new ArrayList<>();
@@ -31,32 +31,35 @@ public class CropRow<T extends Crop> {
     }
 
     public boolean hasBeenFertilized() {
-        return isRowFertilized;
+        return hasRowFertilized;
     }
 
-    public void fertilizeRow() {
-        for(T crop: this.cropRow){
-            crop.fertilize();
-        }
-        isRowFertilized =true;
+    public void fertilizeRow(CropRow cr) {
+//        for(T crop: this.cropRow){
+//            crop.fertilize();
+        cr.hasRowFertilized = true;
+//        }
+       // isRowFertilized =true;
     }
 
     public boolean hasBeenHarvested() {
-        return isRowHarvested;
+        return hasRowHarvested;
     }
 
-    public void harvestRow() {
-        for(T crop: this.cropRow){
-            crop.harvest();
-        }
-        isRowHarvested =true;
+    public void harvestRow(CropRow cr) {
+//        for(T crop: this.cropRow){
+//            crop.harvest();
+        cr.hasRowHarvested = true;
+//        }
+//        isRowHarvested =true;
     }
 
     public boolean hasBeenWatered() {
-        return isRowWatered;
+        return hasRowWatered;
     }
 
-    public void waterRow() {
-        isRowWatered = true;
+    public void waterRow(CropRow cr) {
+        cr.hasRowWatered = true;
     }
+
 }

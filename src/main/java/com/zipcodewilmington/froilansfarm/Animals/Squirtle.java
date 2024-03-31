@@ -8,6 +8,11 @@ public class Squirtle extends Animal {
         this.type = type;
         this.id = id;
     }
+
+    public Squirtle() {
+        super();
+    }
+
     public void setName(String name){
         this.name = name;
     }
