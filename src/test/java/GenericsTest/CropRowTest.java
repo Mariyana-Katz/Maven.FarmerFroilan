@@ -2,6 +2,7 @@ package GenericsTest;
 import CropTest.TomatoPlantTest;
 import PersonTest.FarmerTest;
 import com.zipcodewilmington.froilansfarm.Animals.Squirtle;
+import com.zipcodewilmington.froilansfarm.Crop.Crop;
 import com.zipcodewilmington.froilansfarm.Crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.Crop.CropRow;
 import com.zipcodewilmington.froilansfarm.Food.Tomato;
@@ -21,16 +22,16 @@ public class CropRowTest {
         Assert.assertTrue(croprow instanceof Crop);
     }
 
-//    @Test
-//    public void testHasBeenPlanted(){
-//        CropRow<TomatoPlant> rowOne = new CropRow<>();
-//        Farmer froilan = new Farmer();
-//        TomatoPlant tPlant = new TomatoPlant();
-//
-//        froilan.plant(tPlant, rowOne);
-//
-//        Assert.assertTrue(rowOne.hasBeenPlanted);
-//    }
+    @Test
+    public void testHasBeenPlanted(){
+        CropRow<TomatoPlant> rowOne = new CropRow<>();
+        Farmer froilan = new Farmer();
+        TomatoPlant tPlant = new TomatoPlant();
+
+        froilan.plant(tPlant, rowOne);
+
+        Assert.assertTrue(rowOne.hasBeenPlanted);
+    }
 //
 //     @Test
 //     public void testGetHowManyPlanted(){
@@ -105,7 +106,7 @@ public class CropRowTest {
          rowOne.clear();
 
          Assert.assertTrue(rowOne.isRowEmpty());
-
+//Hello
 
      }
 
